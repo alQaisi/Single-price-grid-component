@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root {
+    --Grayish_Blue: hsl(218, 22%, 67%);
+    --Light_Gray: hsl(204, 43%, 93%);
+}
+*{
+    font-family: 'Karla', sans-serif;
+}
+body{
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:  hsl(204, 43%, 93%);
+    display: grid;
+    place-items: center;
+}
+main{
+    background-color: white;
+    border-radius: 7px;
+    width:715px;
+    margin: 20px auto;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:.75fr 1fr;
+    overflow: hidden;
+    grid-column-gap:0px;
+    grid-row-gap: 0px;
+}
+.card{
+    box-sizing: border-box;
+    padding:30px 65px 25px 45px;
+}
+.card1{
+    grid-column:1/span 2;
+    height: fit-content;
+}
+.card1 h1{
+    color: hsl(179, 62%, 43%);
+    font-size:1.65rem;
+    margin-bottom:30px;
+}
+h2.highlight{
+    color: hsl(71, 73%, 54%);
+    font-size: 1.25rem;
+}
+.card1 p{
+    margin-top:20px;
+    color: var(--Grayish_Blue);
+    line-height: 30px;
+    max-width:575px;
+}
+.card2{
+    background-color: rgba(43,179,177,255);
+    color: var(--Light_Gray);
+}
+p.price{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-block-end: 0;
+}
+p.price::after{
+    content:"per month";
+    font-size: initial;
+    font-weight: initial;
+    opacity: .75;
+    position: relative;
+    left:17px;
+    bottom:6px;
+}
+.card2 p:last-of-type{
+    margin-block-start:10px;
+    margin-block-end:45px;
+}
+button{
+    width: 100%;
+    box-sizing: border-box;
+    padding:15px;
+    font-size:1.20rem;
+    font-weight: 700;
+    color:rgb(253, 255, 242);
+    background-color: hsl(71, 73%, 54%);
+    outline: none;
+    border:none;
+    border-radius: 7px;
+    box-shadow: rgba(17, 17, 26, 0.2) 0px 0px 16px;
+    cursor: pointer;
+    transition: background-color .35s ease-in-out;
+}
+button:hover{
+    background-color: hsl(71, 70%, 22%);
+}
+.card3{
+    background-color: rgba(74,190,189,255);
+    color: var(--Light_Gray);
+}
+.card3 p{
+    box-sizing: border-box;
+    line-height:30px;
+    opacity: .95;
+    max-width:215px;
+    font-size:1rem;
+}
+@media only screen and (max-width:750px){
+    main{
+        width:90%;
+    }
+    .card3 p{
+        max-width:unset;
+    }
+    .card{
+        padding:30px 30px 30px 30px;
+    }
+}
+@media only screen and (max-width:665px){
+    body{
+        padding:15px 0;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        padding:10px 25px 10px 25px;
+    }
+    .card2 p:last-of-type{
+        margin-block-end:35px;
+    }
+    button{
+        margin-bottom:20px;
+    }
+}
