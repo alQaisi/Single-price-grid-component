@@ -35,7 +35,6 @@ main{
 }
 .card1{
     grid-column:1/span 2;
-    height: fit-content;
 }
 .card1 h1{
     color: hsl(179, 62%, 43%);
